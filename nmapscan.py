@@ -8,7 +8,8 @@ host=input()
 nm.scan(hosts=host,arguments='-n -sP -PE -PA21,23,80,3389')
 hosts_list = [(x, nm[x]['status']['state'])for x in nm.all_hosts()]
 for host, status in hosts_list:
-    print('{0}:{1}'.host)
+    print(f'Host: {host} - Estado: {status}')
+#print('{0}:{1}'.host)
 
 print("Ingresa host a analizar: \n")
 ip=input()
